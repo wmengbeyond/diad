@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+
+	<Server>
+
+		<Host>127.0.0.1</Host>
+
+		<Port>26000</Port>
+
+		<Heartbeat>60</Heartbeat>	<!--单位: s-->
+	</Server>
+	<RabbitMQ>
+		<Host>127.0.0.1</Host><!-- 192.168.8.65-->
+		<Port>5672</Port>
+		<UserName>guest</UserName>
+		<Password>guest</Password>
+		<QueueName>MgtvDispatchQueue_itv_gb</QueueName>
+		<Switch>ON</Switch><!-- ON开 OFF关闭 一个分布式系统中只有一个是ON标识-->
+	</RabbitMQ>
+	<Redis>
+
+		<Host>10.1.172.10</Host>
+
+		<Port>6379</Port>
+
+		<Type>1</Type><!-- 1:订阅者 0:发布者-->
+		<Queue>
+<!-- 队列名称-->
+			<Channel1>channel1</Channel1><!-- 媒资通道-->
+			<Channel2>channel2</Channel2><!-- VIP通道-->
+		</Queue>
+		<RetryNum>2</RetryNum>
+		<MaxActive>123</MaxActive>
+		<MaxIdle>23</MaxIdle>
+
+		<MaxWait>1213</MaxWait>
+
+		<Timeout>56</Timeout>
+		<TestOnBorrow>true</TestOnBorrow>
+
+	</Redis>
+	
+</root>
